@@ -11,22 +11,23 @@ import GraphicEqIcon from '@mui/icons-material/GraphicEq';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
-import { SportsCricketOutlined, SportsFootball, SportsSoccerOutlined } from '@mui/icons-material';
+import { Favorite } from '@mui/icons-material';
 
 export const logo = 'https://cdn-icons-png.flaticon.com/512/1383/1383260.png';
 
 export const categories = [
   { name: 'New', icon: <HomeIcon />, },
+  { name: 'Taarak Mehta Ka Ooltah Chashmah', icon: <Favorite />, },
   { name: 'Coding', icon: <CodeIcon />, },
   { name: 'ReactJS', icon: <CodeIcon />, },
   { name: 'NextJS', icon: <CodeIcon />, },
   { name: 'Music', icon: <MusicNoteIcon /> },
-  { name: 'Education', icon: <SchoolIcon />, }, 
+  { name: 'Education', icon: <SchoolIcon />, },
   { name: 'Podcast', icon: <GraphicEqIcon />, },
   { name: 'Movie', icon: <OndemandVideoIcon />, },
   { name: 'Gaming', icon: <SportsEsportsIcon />, },
   { name: 'Live', icon: <LiveTvIcon />, },
-  { name: 'Sports', icon: <SportsSoccerOutlined />, },
+  { name: 'Sport', icon: <FitnessCenterIcon />, },
   { name: 'Fashion', icon: <CheckroomIcon />, },
   { name: 'Beauty', icon: <FaceRetouchingNaturalIcon />, },
   { name: 'Comedy', icon: <TheaterComedyIcon />, },
@@ -38,5 +39,5 @@ export const demoThumbnailUrl = 'https://i.ibb.co/G2L2Gwp/API-Course.png';
 export const demoChannelUrl = '/channel/UCnSFZ-olBoLGLRUS_3RI2Aw';
 export const demoVideoUrl = '/watch?v=0JZm0cIVHpw';
 export const demoChannelTitle = 'Taarak Mehta Ka Ooltah Chashmah';
-export const demoVideoTitle = 'Build and Deploy Episode 115 - Taarak Mehta Ka Ooltah Chashmah | Full Episode | तारक मेहता का उल्टा चश्मा New Episode JavaScript & React API Projects in 10 Hours - Full Course | RapidAPI';
+export const demoVideoTitle = 'Taarak Mehta Ka Ooltah Chashmah | Full Episode | तारक मेहता का उल्टा चश्मा New Episode JavaScript & React API Projects in 10 Hours - Full Course | RapidAPI';
 export const demoProfilePicture = 'https://yt3.googleusercontent.com/Ou8cuqWa6u_cH5UdmwIp47au5TEKSXOyj13dHlXv92gjGe4xk2EkkBHN3641s1wDhE4thR09xg=s176-c-k-c0x00ffffff-no-rj'
