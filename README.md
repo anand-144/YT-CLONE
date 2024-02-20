@@ -1,3 +1,5 @@
+![YouTube Logo](https://cdn-icons-png.flaticon.com/512/1383/1383260.png)
+
 YTClone is a YouTube clone project built using React, Material-UI (MUI), Tailwind CSS, and the RapidAPI. This project aims to replicate some of the core functionalities of YouTube, such as browsing videos, searching for content, and viewing video details.
 
 Features
