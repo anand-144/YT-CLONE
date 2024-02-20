@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { Typography, Box, Stack } from "@mui/material";
+import {CheckCircle} from "@mui/icons-material";
 
+import { Videos,  Loader} from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
-import { CheckCircle} from "@mui/icons-material";
 
 const VideoDetails = () => {
   const [videoDetails, setVideoDetails] = useState(null);
@@ -12,14 +13,16 @@ const VideoDetails = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetchFromAPI(`videos?snippet,statistics&id=${id}`).then((data) =>
+    fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) =>
       setVideoDetails(data.items[0])
     );
-    fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`)
-    .then((data) => setVideoDetails(data.items));
+
+    fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`).then(
+      (data) => setVideos(data.items)
+    );
   }, [id]);
 
-  if (!videoDetails?.snippet) return "Loading...";
+  if (!videoDetails?.snippet) return <Loader />;
 
   const {
     snippet: { title, channelId, channelTitle },
@@ -42,9 +45,7 @@ const VideoDetails = () => {
             <Stack
               direction="row"
               justifyContent="space-between"
-              sx={{
-                color: "#fff",
-              }}
+              sx={{ color: "#fff" }}
               py={1}
               px={2}
             >
@@ -55,27 +56,30 @@ const VideoDetails = () => {
                 >
                   {channelTitle}
                   <CheckCircle
-                    sx={{ fontSize: "12px", color: "grey", ml: "5px"}}
+                    sx={{ fontSize: "12px", color: "gray", ml: "5px" }}
                   />
                 </Typography>
               </Link>
               <Stack direction="row" gap="20px" alignItems="center">
                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                  {parseInt(viewCount).toLocaleString()}Views
+                  {parseInt(viewCount).toLocaleString()} views
                 </Typography>
                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                  {parseInt(likeCount).toLocaleString()}Likes
+                  {parseInt(likeCount).toLocaleString()} likes
                 </Typography>
               </Stack>
             </Stack>
           </Box>
         </Box>
+        <Box
+          px={2}
+          py={{ md: 1, xs: 5 }}
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Videos videos={videos} direction="column" />
+        </Box>
       </Stack>
-
-                <Box px={2} py={2}>
-
-                </Box>
-
     </Box>
   );
 };
