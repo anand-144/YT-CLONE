@@ -11,7 +11,7 @@ Material-UI (MUI): React components that implement Google's Material Design.
 Tailwind CSS: Utility-first CSS framework for rapidly building custom designs.
 RapidAPI: Platform for accessing a wide range of APIs, used for fetching video data.
 Installation
-Clone the repository: git clone https://github.com/yourusername/ytclone.git
+Clone the repository: git clone (https://github.com/anand-144/YT-CLONE.git)
 Navigate to the project directory: cd ytclone
 Install dependencies: npm install
 Start the development server: npm start
@@ -38,6 +38,6 @@ Acknowledgements
 YTClone utilizes the power of React, Material-UI, Tailwind CSS, and RapidAPI.
 Special thanks to the developers of the libraries and APIs used in this project.
 Contact
-For any questions or inquiries, feel free to contact the project maintainer at your@email.com.
+For any questions or inquiries, feel free to contact the project maintainer at anandsingh14442@gmail.com.
 
 Thank you for using YTClone! 🚀
