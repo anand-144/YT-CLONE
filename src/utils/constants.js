@@ -12,15 +12,18 @@ import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 import { Favorite } from '@mui/icons-material';
+import { Public } from '@mui/icons-material';
+import { AccessibilityNew } from '@mui/icons-material';
+import { VideoCameraFront } from '@mui/icons-material';
 
 export const logo = 'https://cdn-icons-png.flaticon.com/512/1383/1383260.png';
 
 export const categories = [
   { name: 'New', icon: <HomeIcon />, },
-  { name: 'Taarak Mehta Ka Ooltah Chashmah', icon: <Favorite />, },
+  { name: 'News', icon: <Public />, },
   { name: 'Coding', icon: <CodeIcon />, },
-  { name: 'ReactJS', icon: <CodeIcon />, },
-  { name: 'NextJS', icon: <CodeIcon />, },
+  { name: 'Kids', icon: <AccessibilityNew/>, },
+  { name: 'Vlog', icon: <VideoCameraFront />, },
   { name: 'Music', icon: <MusicNoteIcon /> },
   { name: 'Education', icon: <SchoolIcon />, },
   { name: 'Podcast', icon: <GraphicEqIcon />, },
